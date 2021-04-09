@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Am I</title>
+</head>
+<body>
+    <h1 id="user-name"></h1>
+    <div id="image"><img src="" alt=""></div>
+    <script>
+       function userName() {
+        fetch("http://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=288b4a480e26e0f0509e1f8334d45868")
+        .then(res => res.json())
+        .then(data => {
+        //     const user = data.results[0];
+        //     const name = user.name;
+        //     const fullName = `${name.title} ${name.first} ${name.last}`
+        //    document.getElementById('user-name').innerText = fullName;
+        //    const image = user.picture.large;
+        //    document.getElementById('image').innerHTML = image;
+        console.log(data);
+        })
+       }
+       userName();
+    //    setInterval(() => {
+    //        userName()
+    //    }, 3000);
+    </script>
+</body>
+</html>
